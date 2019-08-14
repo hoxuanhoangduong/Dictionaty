@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionnary</title>
+</head>
+<body>
+<h1>Dictionary</h1>
+<input type="text" id="word" placeholder="Insert here">
+<button type="button" onclick="search()">Search</button>
+</br>
+<p id="result"></p>
+<script>
+    let dict = [];
+    dict.push(['dog', 'chó'], ['cat', 'mèo'], ['bird', 'chim']);
+
+    let word = document.getElementById("word").value;
+    let result = document.getElementById('result');
+
+    function search() {
+        alert(word);
+        i = 0;
+        while (i < dict.length) {
+            if (word == dict[i][0]) {
+                result.innerHTML = dict[i][1];
+            } else  {
+                result.innerHTML = 'Can not find anything'
+            }
+        }
+    }
+</script>
+</body>
+</html>
